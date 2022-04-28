@@ -4,7 +4,7 @@
 
 plugins {
     // Apply the java Plugin to add support for Java.
-    java
+    id 'java'
 }
 
 repositories {
@@ -15,14 +15,14 @@ repositories {
 dependencies {
     constraints {
         // Define dependency versions as constraints
-        implementation("org.apache.commons:commons-text:1.9")
+        implementation 'org.apache.commons:commons-text:1.9'
     }
 
     // Use JUnit Jupiter for testing.
-    testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.2'
 }
 
-tasks.named<Test>("test") {
+tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
